@@ -131,7 +131,7 @@ cltv_final.sort_values(by="clv", ascending=False).head(20)
 
 del cltv_final["index"]
 
-# GCustomer segmentation by CLTV
+# Customer segmentation by CLTV
 
 cltv_final["segment"] = pd.qcut(cltv_final["clv"], 4, labels=["D", "C", "B", "A"])
 

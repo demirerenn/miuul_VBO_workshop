@@ -49,7 +49,6 @@ agg_df = df.groupby(["COUNTRY", "SOURCE", "SEX", "AGE"])["PRICE"].mean().sort_va
 "convert index to variable"
 agg_df = agg_df.reset_index()
 
-"GÖREV 5"
 "Converting AGE variable to categorical variable and adding to agg_df"
 agg_df["AGE_CAT"] = pd.cut(agg_df["AGE"], [0, 18, 23, 30, 40, 70], labels=["14_18", "19_23", "24_30", "31_40", "41_66"])
 
